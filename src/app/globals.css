@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideLeftToRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+  
+  @layer utilities {
+    .marquee-left-to-right {
+      animation: slideLeftToRight 10s linear infinite;
+    }
+  }
