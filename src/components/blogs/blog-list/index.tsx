@@ -6,10 +6,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 export default function BlogList({ lists }: { lists: Blog[] }) {
-  const router = useRouter();
-  useEffect(() => {
-    router.refresh();
-  },);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   router.refresh();
+  // },);
 
   async function handleDelete(id: number) {
     console.log(id);
@@ -21,7 +21,7 @@ export default function BlogList({ lists }: { lists: Blog[] }) {
 
     const data = await res.json();
 
-    if (data && data.success) router.refresh();
+    // if (data && data.success) router.refresh();
   }
 
   return (
